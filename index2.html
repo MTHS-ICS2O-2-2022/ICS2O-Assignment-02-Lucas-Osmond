@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Area Of Shapes" />
+    <meta name="keywords" content="ics2o" />
+    <meta name="author" content="Lucas Osmond" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-teal.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <title class="mdl-layout-header">Volume of Triangular Prism</title>
+  </head>
+  <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fix-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Calculator</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <div>
+            <p>
+              <img src="./images/download.png" alt="triangle" width="18%" height="auto" class="shape" />
+            </p>
+            <h2>Formulas</h2>
+            <h3>A = 1/2 x H x W x L</h3>
+          </div>
+        </table>
+        <!-- Simple Textfield -->
+        <form action="#">
+          <p>Height</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-of-triangular-prism" />
+            <label class="mdl-textfield__label" for="height-of-triangular-prism">height ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <form action="#">
+          <p>Length</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length-of-triangular-prism" />
+            <label class="mdl-textfield__label" for="length-of-triangular-prism">length ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <p>Width</p>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width-of-triangular-prism" />
+            <label class="mdl-textfield__label" for="width-of-triangular-prism">width ...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <br />
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculate()">
+          Calculate
+        </button>
+        <br />
+        <div id="answers">
+          <div id="area"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
